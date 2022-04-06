@@ -1,3 +1,35 @@
 body {
-  background-color: peachpuff;
+  background-color: grey;
+}
+
+.container {
+  background-color: black;
+  border-radius: 5% 5%;
+}
+header {
+  margin-top: 5%;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.col-md-6 {
+  padding-top: 2%;
+  text-align: center;
+  margin-top: .25in;
+  background-color: rgb(240, 226, 212);
+  border: 3px solid black;
+  padding-bottom: 50px;
+  border-radius: 5% 5%;
+  width: 50%;
+  height: 450px;
+  float: center;
+}
+
+.dice1, .dice2, .dice3, .dice4, .dice5, .dice6 {
+  display: none;
+}
+
+#player1-wins, #player2-wins {
+  display: none;
 }
