@@ -42,10 +42,10 @@ Player.prototype.turnEnd = function () {
 function win() {
   if (player1.totalScore >= 100) {
     $("#player1-wins").show();
-    $("#game").hide();
+    $(".game").hide();
   } if (player2.totalScore >= 100) {
     $("#player2-wins").show();
-    $("#game").hide();
+    $(".game").hide();
   }
 }
 
