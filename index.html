@@ -12,15 +12,17 @@
 </head>
 <body>
   <div class="container">
-    <header>
-        <h1>PIG DICE</h1>
-    </header>
+    <!-- <header> -->
+    <div class="header">
+      <h1>PIG DICE</h1>
+    </div>  
+    <!-- </header> -->
     <div class="game">
       <div class="row">
         <div class="col-md-6" id="col-player1">
           <h2>Player 1:</h2>
           <div class="nes-container is-rounded is-dark">
-            <h1>Player One</h1>
+            <h1>Fighter One</h1>
           </div>
           <h2>Total</h2>
           <p id="p1-total"></p>
@@ -34,7 +36,7 @@
         <div class="col-md-6" id="col-player2">
           <h2>Player 2:</h2>
           <div class="nes-container is-rounded is-dark">
-            <h1>Player Two</h1>
+            <h1>Fighter Two</h1>
           </div>
           <h2>Total</h2>
           <p id="p2-total"></p>
@@ -46,24 +48,35 @@
           </div>
         </div>
       </div>
-      <div class="diceRow">
+      <div class="row" id="diceRow">
         <div class="col-12">
-          <p class="dice1">1</p>
-          <p class="dice2">2</p>
-          <p class="dice3">3</p>
-          <p class="dice4">4</p>
-          <p class="dice5">5</p>
-          <p class="dice6">6</p>
+          <!-- <img class="nodice" src="img/blankdice.png" alt="no dice"> -->
+          <img class="dice1" src="img/dice1.png" alt="one dice">
+          <img class="dice2" src="img/dice2.png" alt="two dice">
+          <img class="dice3" src="img/dice3.png" alt="three dice">
+          <img class="dice4" src="img/dice4.png" alt="four dice">
+          <img class="dice5" src="img/dice5.png" alt="five dice">
+          <img class="dice6" src="img/dice6.png" alt="six dice">
         </div>
       </div>
     </div>
     <div id="player1-wins">
-      <h1>PLAYER ONE WINS!</h1>
+      <h1>FIGHTER ONE WINS!</h1>
       <button class="btn btn-dark" onClick="window.location.reload();">RESET GAME</button>
+      <section class="icon-list">
+        <i class="nes-icon is-large star"></i>
+        <i class="nes-icon is-large star"></i>
+        <i class="nes-icon is-large star"></i>
+      </section>
     </div>
     <div id="player2-wins">
-      <h1>PLAYER TWO WINS!</h1>
+      <h1>FIGHTER TWO WINS!</h1>
       <button class="btn btn-dark" onClick="window.location.reload();">RESET GAME</button>
+      <section class="icon-list">
+        <i class="nes-icon is-large star"></i>
+        <i class="nes-icon is-large star"></i>
+        <i class="nes-icon is-large star"></i>
+      </section>
     </div>
   </div>
 </body>

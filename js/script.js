@@ -8,14 +8,15 @@
 */
 
 // business logic
-// constructor function blueprint for each player turn
 
+// constructor function blueprint for each player turn
 function Player(totalScore, rollScore, turnScore) {
   this.totalScore = totalScore;
   this.rollScore = rollScore;
   this.turnScore = turnScore;
 }
 
+// constructors for both players
 let player1 = new Player(0, 0, 0);
 let player2 = new Player(0, 0, 0);
 
@@ -37,7 +38,7 @@ Player.prototype.turnEnd = function () {
   return this;
 };
 
-
+// also throw click functions
 function win() {
   if (player1.totalScore >= 100) {
     $("#player1-wins").show();
@@ -49,7 +50,7 @@ function win() {
 }
 
 
-
+// cascading issue, throw under click functions
 function roll(player) {
   $(".dice1").hide();
   $(".dice2").hide();
@@ -57,20 +58,20 @@ function roll(player) {
   $(".dice4").hide();
   $(".dice5").hide();
   $(".dice6").hide();
-  $(".diceRow").show();
-  if (player.roll === 0) {
-    // $(".dice1").show();
-    $(".buttons1").toggle();
-    $(".buttons2").toggle();
-  } else if (player.roll === 2) {
+  $("#diceRow").show();
+  if (player.rollScore === 0) {
+    $(".dice1").show();
+    $("#buttons1").toggle();
+    $("#buttons2").toggle();
+  } else if (player.rollScore === 2) {
     $(".dice2").show();
-  } else if (player.roll === 3) {
+  } else if (player.rollScore === 3) {
     $(".dice3").show();
-  } else if (player.roll === 4) {
+  } else if (player.rollScore === 4) {
     $(".dice4").show();
-  } else if (player.roll === 5) {
+  } else if (player.rollScore === 5) {
     $(".dice5").show();
-  } else if (player.roll === 6) {
+  } else if (player.rollScore === 6) {
     $(".dice6").show();
   }
 }
@@ -91,6 +92,8 @@ $(document).ready(function() {
     $("#p1-current").html(player1.turnScore)
     $("#buttons1").hide();
     $("#buttons2").show();
+    // $("#dicerow").hide();
+    // $(".nodice").show();
   });
 
   $("button#roll2").click(function (event) {
@@ -108,6 +111,8 @@ $(document).ready(function() {
     $("#p2-current").html(player2.turnScore)
     $("#buttons2").hide();
     $("#buttons1").show();
+    // $("#dicerow").hide();
+    // $(".nodice").show();
   });
 
 });
